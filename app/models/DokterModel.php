@@ -1,6 +1,6 @@
 <?php 
 
-class Dokter{
+class DokterModel{
     private $table = "dokter";
     private $db;
 

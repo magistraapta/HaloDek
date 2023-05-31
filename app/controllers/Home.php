@@ -5,7 +5,7 @@ class Home extends Controller{
     {
         $data['title'] = "halaman home";
         // $data['nama'] = $this->model('User_model')->getNama();
-        $data['dokter'] = $this->model('dokter')->getAllDokter();
+        $data['dokter'] = $this->model('DokterModel')->getAllDokter();
         $this->view('templates/header', $data);
         $this->view('home/index', $data);
         $this->view('templates/footer', $data);
