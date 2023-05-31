@@ -1,0 +1,119 @@
+$purple: #563AD6;
+$aqua: #3ABAD6;
+$navy: #02044A;
+$white: #FFFFFF;
+$sofpur: #EAEAF4;
+$darpur: #777790;
+$medpur: #777790;
+$lilpur: #F9F9FB;
+$newPur: #9B9CB7;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+);
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+.btn-master{
+    padding: 15px 26px 15px 26px;
+    border-radius: 10px;
+    font-weight: map-get($font-weights, semibold );
+    border: 0
+}
+
+.btn-nav{
+    padding: 8px 16px 8px 16px;
+    border-radius: 10px;
+    font-weight: map-get($font-weights, semibold );
+    border: 0;
+    text-decoration: none;
+}
+
+.btn-nav-primary{
+    @extend .btn-nav;
+    color: $white;
+    background: $purple;
+}
+
+.btn-nav-secondary{
+    @extend .btn-nav;
+    color: $navy;
+    background: $sofpur;
+}
+
+.btn-primary{
+    @extend .btn-master;
+    color: $white;
+    background: $purple;
+}
+
+.btn-secondary{
+    @extend .btn-master;
+    color: $navy;
+    background: $sofpur;
+}
+
+
+.sales{
+    margin-top: 50px;
+    .copywriting{
+        .header{
+            font-weight: map-get($font-weights, semibold );
+            color: $navy;
+            font-size: 38px;
+            line-height: 60px;
+        }
+        .description{
+            color: $newPur;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: map-get($font-weights, regular );
+        }
+    }
+}
+
+.navbar-tp{
+    padding-top: 30px;
+    
+    
+    .navbar-nav{
+        li {
+            padding-left: 50px;
+        }
+        .active{
+            color: $aqua !important;
+            font-weight: map-get($font-weights, medium) !important;
+            
+        }
+        .nav-link{
+            color: $navy;
+            font-weight: 400;
+        }
+    }
+}
+
+.brands{
+    margin-top: 150px;
+    h4 {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: map-get($font-weights, medium);
+        color: $navy;
+    }
+}
+
+.services{
+    margin-top: 50px;
+    .doctor{
+        margin-top: 16px;
+        background: $white;
+        padding: 24px;
+        border-radius: 10px;
+        color: $navy;
+        border: solid 2px;
+        border-color: $sofpur;
+    }
+}
+

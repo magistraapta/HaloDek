@@ -1,0 +1,92 @@
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.btn-master, .btn-secondary, .btn-primary {
+  padding: 15px 26px 15px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 0;
+}
+
+.btn-nav, .btn-nav-secondary, .btn-nav-primary {
+  padding: 8px 16px 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 0;
+  text-decoration: none;
+}
+
+.btn-nav-primary {
+  color: #FFFFFF;
+  background: #563AD6;
+}
+
+.btn-nav-secondary {
+  color: #02044A;
+  background: #EAEAF4;
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  background: #563AD6;
+}
+
+.btn-secondary {
+  color: #02044A;
+  background: #EAEAF4;
+}
+
+.sales {
+  margin-top: 50px;
+}
+.sales .copywriting .header {
+  font-weight: 600;
+  color: #02044A;
+  font-size: 38px;
+  line-height: 60px;
+}
+.sales .copywriting .description {
+  color: #9B9CB7;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.navbar-tp {
+  padding-top: 30px;
+}
+.navbar-tp .navbar-nav li {
+  padding-left: 50px;
+}
+.navbar-tp .navbar-nav .active {
+  color: #3ABAD6 !important;
+  font-weight: 500 !important;
+}
+.navbar-tp .navbar-nav .nav-link {
+  color: #02044A;
+  font-weight: 400;
+}
+
+.brands {
+  margin-top: 150px;
+}
+.brands h4 {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #02044A;
+}
+
+.services {
+  margin-top: 50px;
+}
+.services .doctor {
+  margin-top: 16px;
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 10px;
+  color: #02044A;
+  border: solid 2px;
+  border-color: #EAEAF4;
+}/*# sourceMappingURL=main.css.map */
