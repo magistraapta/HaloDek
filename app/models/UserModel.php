@@ -13,9 +13,16 @@ class UserModel{
 		return $this->db->resultSet();
     }
 
-    public function getDokterById($id){
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
-		$this->db->bind('id',$id);
-		return $this->db->single();
-    }
+
+    public function tambahUser($data)
+	{
+		$query = "INSERT INTO user (username,email,password) VALUES(:username,:email,:password)";
+		$this->db->query($query);
+		$this->db->bind('username',$data['username']);
+		$this->db->bind('email',$data['email']);
+		$this->db->bind('password', md5($data['password']));
+		$this->db->execute();
+
+		return $this->db->rowCount();
+	}
 }

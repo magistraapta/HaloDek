@@ -10,4 +10,17 @@ class User extends Controller{
         $this->view('user/index', $data);
         $this->view('templates/footer');
     }
+
+    public function tambah(){
+		$data['title'] = 'Tambah User';		
+		$this->view('templates/header', $data);
+		$this->view('user/create', $data);
+		$this->view('templates/footer');
+	}
+
+    public function create(){
+        if ($this->model('UserModel')->tambahUser($_POST) > 0) {
+            header('Location:'. BASEURL. '/user');
+        }
+    }
 }

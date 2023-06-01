@@ -45,7 +45,7 @@ body{
 
 .btn-primary{
     @extend .btn-master;
-    color: $white;
+    color: $white !important;
     background: $purple;
 }
 

@@ -38,9 +38,27 @@
               </li>
             </ul>
           </div>
+          <?php if ($_SESSION['session_login'] = 'sudah_login') :?>
+            <div class="dropdown">
+              <button class="btn btn-nav-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                User
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                <a href="<?= BASEURL?>/user"  class="dropdown-item text-decoration-none">Sign up</a>
+                </li>
+                <li>
+                  <a href="<?= BASEURL?>/login" class="dropdown-item text-decoration-none">Log in</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="<?=BASEURL?>/logout">Logout</a>
+                </li>
+              </ul>
+            </div>
+          <?php endif ?>
           <div class="navbar-nav">
             <a href="<?= BASEURL?>/user"  class="btn-nav-primary text-decoration-none me-3">Sign up</a>
             <a href="<?= BASEURL?>/login" class="btn-nav-secondary text-decoration-none">Log in</a>
-          </div>
+            </div>
         </div>
       </nav>

@@ -13,7 +13,7 @@ class Home extends Controller{
 
     public function detail($id){
         $data['title'] = "halaman detail";
-        $data['dokter'] =$this->model('dokter')->getDokterById($id);
+        $data['dokter'] =$this->model('DokterModel')->getDokterById($id);
         $this->view('templates/header', $data);
         $this->view('home/detail', $data);
         $this->view('templates/footer', $data); 
