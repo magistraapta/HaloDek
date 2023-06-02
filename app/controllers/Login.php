@@ -14,7 +14,7 @@ class Login extends Controller{
 				$_SESSION['session_login'] = 'sudah_login'; 
 
 				//$this->model('LoginModel')->isLoggedIn($_SESSION['session_login']);
-				
+				// var_dump($_SESSION);
 				header('location: '. BASEURL . '/');
 		} else {
 			Flasher::setMessage('Username / Password','salah.','danger');

@@ -38,27 +38,25 @@
               </li>
             </ul>
           </div>
-          <?php if ($_SESSION['session_login'] = 'sudah_login') :?>
+          <?php if ($_SESSION['session_login'] === 'sudah_login') :?>
             <div class="dropdown">
               <button class="btn btn-nav-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                User
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+              </svg>
               </button>
               <ul class="dropdown-menu">
                 <li>
-                <a href="<?= BASEURL?>/user"  class="dropdown-item text-decoration-none">Sign up</a>
-                </li>
-                <li>
-                  <a href="<?= BASEURL?>/login" class="dropdown-item text-decoration-none">Log in</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="<?=BASEURL?>/logout">Logout</a>
+                  <a class="dropdown-item" href="<?=BASEURL?>/logout/signout">Logout</a>
                 </li>
               </ul>
             </div>
+            <?php else: ?>
+              <div class="navbar-nav">
+              <a href="<?= BASEURL?>/user/tambah"  class="btn-nav-primary text-decoration-none me-3">Sign up</a>
+              <a href="<?= BASEURL?>/login" class="btn-nav-secondary text-decoration-none">Log in</a>
+              </div>
           <?php endif ?>
-          <div class="navbar-nav">
-            <a href="<?= BASEURL?>/user"  class="btn-nav-primary text-decoration-none me-3">Sign up</a>
-            <a href="<?= BASEURL?>/login" class="btn-nav-secondary text-decoration-none">Log in</a>
-            </div>
+          
         </div>
       </nav>

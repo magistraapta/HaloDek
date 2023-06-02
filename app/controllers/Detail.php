@@ -1,6 +1,7 @@
 <?php 
 
 class Detail extends Controller{
+    
     public function index(){
         $data['title'] = "halaman detail";
         $this->view('templates/header', $data);
@@ -15,4 +16,6 @@ class Detail extends Controller{
         $this->view('detail/detail', $data);
         $this->view('templates/footer', $data); 
     }
+
+    
 }
