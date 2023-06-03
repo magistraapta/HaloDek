@@ -12,7 +12,11 @@
                         <p><?= $data['dokter']['deskripsi']; ?></p>
                     </div>
                     <div class="mt-5">
-                        <button class="btn-primary">Make an appointment</button>
+                        <form action="<?=BASEURL?>/detail/processAppointment" method="post">
+                            <input type="hidden" name="user_id" value="<?=$data['user']['id']?>">
+                            <input type="hidden" name="dokter_id" value="<?=$data['dokter']['id']?>">
+                            <button class="btn btn-primary" type="submit">Make an appointment</button>
+                        </form>
                     </div>
                 </div>
         </div>

@@ -14,9 +14,9 @@ class User extends Controller{
         $data['title'] = "halaman user";
         // $data['nama'] = $this->model('User_model')->getNama();
         $data['user'] = $this->model('UserModel')->getAllUser();
-        $this->view('templates/header', $data);
+        $this->view('templates/adminHeader', $data);
         $this->view('user/index', $data);
-        $this->view('templates/footer');
+        $this->view('templates/adminFooter');
     }
 
     public function tambah(){

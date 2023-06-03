@@ -46,7 +46,7 @@
           <h4 class="align-center">Our Service</h4>
       </div>
       <div class="row d-flex justify-content-between">
-        <?php foreach ($data['dokter'] as $dok) : ?>
+        <?php foreach (array_slice($data['dokter'], 0, 3) as $dok) : ?>
           <div class="doctor col-3">
             <a href="<?= BASEURL?>/home/detail/<?=$dok['id']?>" class="text-decoration-none">
               <h3 class="text-capitalize"><?= $dok['nama']; ?></h3>
