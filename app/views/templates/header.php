@@ -16,7 +16,7 @@
 </head>
 <body>
    
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white navbar-tp">
+    <nav class="navbar navbar-expand-lg py-4 sticky-top navbar-light bg-white navbar-tp">
         <div class="container">
             <a href="<?=BASEURL?>" class="text-decoration-none"><h3 class="text-black">HaloDek</h3></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
