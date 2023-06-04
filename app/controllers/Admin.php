@@ -5,7 +5,7 @@ class Admin extends Controller{
 	{	
 		if($_SESSION['session_login'] != 'sudah_login') {
 			// Flasher::setMessage('Login','Tidak ditemukan.','danger');
-			header('location: '. BASEURL . '/login');
+			header('location: '. BASEURL . '/login/admin');
 			exit;
 		}
 	} 

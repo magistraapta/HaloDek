@@ -36,7 +36,7 @@
             </ul>
           </div>
           <div class="">
-            <a class="dropdown-item" href="<?=BASEURL?>/logout/signout">Logout</a>
+            <a class="dropdown-item" href="<?=BASEURL?>/logout/signoutadmin">Logout</a>
           </div>
         </div>
       </nav>

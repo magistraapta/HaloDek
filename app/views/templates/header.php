@@ -30,12 +30,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Stories</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="#">Premium</a>
-              </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">About us</a>
               </li>
+              
             </ul>
           </div>
           <?php if ($_SESSION['session_login'] === 'sudah_login') :?>
