@@ -24,6 +24,8 @@ class Admin extends Controller{
         $this->view('templates/adminFooter', );
     }
 
+    
+
 
     public function simpanDokter(){		
 

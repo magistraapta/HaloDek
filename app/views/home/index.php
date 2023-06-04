@@ -42,8 +42,11 @@
 
 <div class="services">
   <div class="container">
-      <div class="header">
-          <h4 class="align-center">Our Service</h4>
+      <div class="header row  ">
+        <div class="col d-flex align-items-center justify-content-between">
+        <h4 class="align-center">Our Service</h4>
+        <a href="#">see all</a>
+      </div>
       </div>
       <div class="row d-flex justify-content-between">
         <?php foreach (array_slice($data['dokter'], 0, 3) as $dok) : ?>
@@ -55,7 +58,6 @@
               <h5 class="mt-4">Rp.<?= $dok['harga']; ?>/sesi</h5>
           </div>
           <?php endforeach ?>
-          
       </div>
   </div>
 </div>

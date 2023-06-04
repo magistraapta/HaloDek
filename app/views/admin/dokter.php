@@ -1,6 +1,8 @@
 <div class="container mt-5">
     <h4>List Dokter</h4>
     <div class="row">
+        <a href="<?=BASEURL?>/admin/tambah" >tambah dokter</a>
+        
         <div class="col">
             <table class="table align-middle mb-0 bg-white">
                 <thead class="bg-light">
@@ -18,7 +20,7 @@
                         <div class="d-flex align-items-center">
                         
                         <div class="ms-3">
-                            <p class="fw-bold mb-1"><?= $dok['nama']; ?></p>
+                            <p class="fw-bold mb-1 text-capitalize"><?= $dok['nama']; ?></p>
                         </div>
                         </div>
                     </td>

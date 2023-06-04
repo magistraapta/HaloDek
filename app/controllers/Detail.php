@@ -1,7 +1,14 @@
 <?php 
 
 class Detail extends Controller{
-    
+    public function __construct()
+	{	
+		if($_SESSION['session_login'] != 'sudah_login') {
+			// Flasher::setMessage('Login','Tidak ditemukan.','danger');
+			header('location: '. BASEURL . '/login/admin');
+			exit;
+		}
+	} 
     public function index(){
         $data['title'] = "halaman detail";
         $this->view('templates/header', $data);
@@ -18,17 +25,5 @@ class Detail extends Controller{
         $this->view('templates/footer', $data); 
     }
 
-   public function processAppointment(){
-    if( $this->model('AppointmentModel')->makeAppointment($_POST) > 0 ) {
-        // Flasher::setMessage('Berhasil','ditambahkan','success');
-        // header('location: '. BASEURL . '/');
-        var_dump($_POST);
-        exit;			
-    }else{
-        // Flasher::setMessage('Gagal','ditambahkan','danger');
-        // header('location: '. BASEURL . '/');
-        var_dump($_POST);
-        exit;	
-    }
-   }
+   
 }

@@ -11,12 +11,16 @@ class Login extends Controller{
     }
 
     public function prosesLogin() {
-        // var_dump($_POST);
-		if($row = $this->model('LoginModel')->checkLogin($_POST) > 0 ) {
-				$_SESSION['username'] = $row['username'];
-				$_SESSION['email'] = $row['email'];
+        // var_dump($_SESSION['account']);
+		if($row = $this->model('LoginModel')->checkLogin($_POST)) {
+				$_SESSION['account'] = [
+					"email" => $row['email'],
+					"password" => $row['password'],
+					"username" => $row['username'],
+					"id" => $row['id'],
+				];
 				$_SESSION['session_login'] = 'sudah_login'; 
-
+				// var_dump($row);
 				//$this->model('LoginModel')->isLoggedIn($_SESSION['session_login']);
 				// var_dump($_SESSION);
 				header('location: '. BASEURL . '/');

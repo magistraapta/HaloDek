@@ -16,7 +16,7 @@
 </head>
 <body>
    
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white navbar-tp">
+    <nav class="navbar navbar-expand-lg sticky-top p-4 navbar-light bg-white navbar-tp">
         <div class="container">
             <a href="<?=BASEURL?>/admin" class="text-decoration-none"><h3 class="text-black">HaloDek<span class="fs-5 text-warning">Admin </span></h3></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
                 <a class="nav-link" href="<?=BASEURL?>/user">user</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="#">appointment</a>
+                <a class="nav-link" href="<?=BASEURL?>/appointment">appointment</a>
               </li>
             </ul>
           </div>

@@ -9,6 +9,17 @@ class AppointmentModel{
         $this->db = new Database;
     }
 
+    public function getAllAppointment(){
+        $this->db->query("SELECT * FROM " . $this->table );
+		return $this->db->resultSet();
+    }
+
+    public function getAppointmentId($id){
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+		$this->db->bind('id',$id);
+		return $this->db->single();
+    }
+
     public function makeAppointment($data){
         $query = 'INSERT INTO appointment (user_id, dokter_id) VALUES (:user_id, :dokter_id)';
         $this->db->query($query);
@@ -18,4 +29,15 @@ class AppointmentModel{
 
         $this->db->rowCount();
     }
+
+    public function delete($id)
+	{
+		$this->db->query('DELETE FROM ' . $this->table . ' WHERE id=:id');
+		$this->db->bind('id',$id);
+		$this->db->execute();
+
+		return $this->db->rowCount();
+	}
+
+    
 }
