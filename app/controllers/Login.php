@@ -19,13 +19,14 @@ class Login extends Controller{
 					"username" => $row['username'],
 					"id" => $row['id'],
 				];
-				$_SESSION['session_login'] = 'sudah_login'; 
+				$_SESSION['session_login'] = 'sudah_login';
+				$_SESSION['status'] = 'user';
 				// var_dump($row);
 				//$this->model('LoginModel')->isLoggedIn($_SESSION['session_login']);
 				// var_dump($_SESSION);
 				header('location: '. BASEURL . '/');
 		} else {
-			// Flasher::setMessage('Username / Password','salah.','danger');
+			Flasher::setMessage('Username / Password','salah.','danger');
 			header('location: '. BASEURL . '/login');
 			exit;	
 		}
@@ -33,17 +34,19 @@ class Login extends Controller{
 
     public function prosesLoginAdmin() {
         // var_dump($_POST);
-		if($row = $this->model('LoginModel')->checkLogin($_POST) > 0 ) {
-				$_SESSION['username'] = $row['username'];
-				$_SESSION['email'] = $row['email'];
-				$_SESSION['session_login'] = 'sudah_login'; 
+		if($row = $this->model('LoginModel')->checkAdminLogin($_POST) ) {
+				$_SESSION['name'] = $row['name'];
+				$_SESSION['password'] = $row['password'];
+				$_SESSION['session_login'] = 'sudah_login';
+				$_SESSION['status'] = 'admin';
 
 				//$this->model('LoginModel')->isLoggedIn($_SESSION['session_login']);
 				// var_dump($_SESSION);
 				header('location: '. BASEURL . '/admin');
 		} else {
 			// Flasher::setMessage('Username / Password','salah.','danger');
-			header('location: '. BASEURL . '/login');
+			// header('location: '. BASEURL . '/login');
+			echo 'error';
 			exit;	
 		}
 	}

@@ -39,8 +39,8 @@
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your admin account</h5>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" class="form-control form-control-lg" name="email" />
-                    <label class="form-label" for="form2Example17">Email address</label>
+                    <input type="text" id="form2Example17" class="form-control form-control-lg" name="name" />
+                    <label class="form-label" for="form2Example17">Name</label>
                   </div>
 
                   <div class="form-outline mb-4">

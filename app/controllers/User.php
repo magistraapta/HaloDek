@@ -1,6 +1,7 @@
 <?php 
 
 class User extends Controller{
+   
     public function index()
     {
         $data['title'] = "halaman user";

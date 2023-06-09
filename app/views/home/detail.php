@@ -15,6 +15,12 @@
                         <form action="<?=BASEURL?>/appointment/processAppointment" method="post">
                             <input type="hidden" name="user_id" value="<?=$_SESSION['account']['username']?>">
                             <input type="hidden" name="dokter_id" value="<?=$data['dokter']['nama']?>">
+
+                            <div class="col-4 form-outline datetimepicker">
+                                <input type="date" class="form-control" id="datetimepickerExample" name="date">
+                                <label for="datetimepickerExample" class="form-label">Select Date and Time</label>
+                            </div>
+
                             <button class="btn btn-primary" type="submit">Make an appointment</button>
                         </form>
                     </div>

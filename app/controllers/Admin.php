@@ -3,7 +3,7 @@
 class Admin extends Controller{
     public function __construct()
 	{	
-		if($_SESSION['session_login'] != 'sudah_login') {
+		if($_SESSION['status'] != 'admin') {
 			// Flasher::setMessage('Login','Tidak ditemukan.','danger');
 			header('location: '. BASEURL . '/login/admin');
 			exit;
@@ -28,12 +28,12 @@ class Admin extends Controller{
 
 
     public function simpanDokter(){		
-
-		if( $this->model('DokterModel')->tambahDokter($_POST) > 0 ) {
-			// Flasher::setMessage('Berhasil','ditambahkan','success');
-			header('location: '. BASEURL . '/admin/dokter');
-			exit;			
-		}
+        var_dump($_POST);
+		// if( $this->model('DokterModel')->tambahDokter($_POST) > 0 ) {
+		// 	// Flasher::setMessage('Berhasil','ditambahkan','success');
+		// 	header('location: '. BASEURL . '/admin/dokter');
+		// 	exit;			
+		// }
 	}
 
     public function dokter(){
@@ -75,6 +75,7 @@ class Admin extends Controller{
 		}else{
 			// Flasher::setMessage('Gagal','diupdate','danger');
 			header('location: '. BASEURL . '/admin/dokter');
+            echo 'error';
             // echo 'error';
             // var_dump($_POST);
 			exit;	

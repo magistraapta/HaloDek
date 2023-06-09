@@ -25,7 +25,7 @@
                     <div class="row">
                     <label for="deskripsi">Deskripsi</label>
                     </div>
-                    <textarea name="deskripsi" id="deskripsi" cols="50" rows="5" value="<?=$data['dokter']['deskripsi']?>"></textarea>
+                    <textarea name="deskripsi" id="deskripsi" cols="50" rows="5" value="<?=$data['dokter']['deskripsi']?>"><?=$data['dokter']['deskripsi']?></textarea>
                   </div>
                   <div class="form-group">
                     <label >Harga</label>
