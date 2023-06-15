@@ -28,12 +28,12 @@ class Admin extends Controller{
 
 
     public function simpanDokter(){		
-        var_dump($_POST);
-		// if( $this->model('DokterModel')->tambahDokter($_POST) > 0 ) {
-		// 	// Flasher::setMessage('Berhasil','ditambahkan','success');
-		// 	header('location: '. BASEURL . '/admin/dokter');
-		// 	exit;			
-		// }
+        // var_dump($_POST);
+		if( $this->model('DokterModel')->tambahDokter($_POST) > 0 ) {
+			// Flasher::setMessage('Berhasil','ditambahkan','success');
+			header('location: '. BASEURL . '/admin/dokter');
+			exit;			
+		}
 	}
 
     public function dokter(){

@@ -21,11 +21,12 @@ class AppointmentModel{
     }
 
     public function makeAppointment($data){
-        $query = 'INSERT INTO appointment (user_id, dokter_id, date) VALUES (:user_id, :dokter_id, :date)';
+        $query = 'INSERT INTO appointment (user_id, dokter_id, date, time) VALUES (:user_id, :dokter_id, :date, :time)';
         $this->db->query($query);
         $this->db->bind('user_id', $data['user_id']);
         $this->db->bind('dokter_id', $data['dokter_id']);
         $this->db->bind('date', $data['date']);
+        $this->db->bind('time', $data['time']);
         $this->db->execute();
 
         $this->db->rowCount();

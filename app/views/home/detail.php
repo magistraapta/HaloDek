@@ -19,6 +19,12 @@
                             <div class="col-4 form-outline datetimepicker">
                                 <input type="date" class="form-control" id="datetimepickerExample" name="date">
                                 <label for="datetimepickerExample" class="form-label">Select Date and Time</label>
+                                <select class="form-select my-2" name="time" aria-label="Default select example">
+                                    <option selected>Pilih waktu temu</option>
+                                    <option value="19.00">19.00</option>
+                                    <option value="20.00">20.00</option>
+                                    <option value="21.00">21.00</option>
+                                </select>
                             </div>
 
                             <button class="btn btn-primary" type="submit">Make an appointment</button>

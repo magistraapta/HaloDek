@@ -8,6 +8,7 @@
                     <th>Nama Customer</th>
                     <th>Nama Dokter</th>
                     <th>Tanggal Temu</th>
+                    <th>Waktu</th>
                     <th>Actions</th>
                     </tr>
                 </thead>
@@ -27,6 +28,9 @@
                     </td>
                     <td>
                         <p class="fw-normal mb-1"><?= $app['date']; ?></p>
+                    </td>
+                    <td>
+                        <p class="fw-normal mb-1"><?= $app['time']; ?></p>
                     </td>
                     <td>
                         <a href="<?=BASEURL?>/appointment/hapus/<?=$app['id']?>" class="btn btn-danger">Delete</a>
