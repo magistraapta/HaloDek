@@ -15,11 +15,8 @@
               We are committed to providing you with the highest quality care possible. We are also committed to making your experience as comfortable and convenient as possible.
               </p>
               <p class="button">
-                  <a href="#" class="btn btn-primary me-2">
+                  <a href="#dokter" class="btn btn-primary me-2">
                   Get Started
-                  </a>
-                  <a href="#" class="btn btn-secondary">
-                  Testimonials
                   </a>
               </p>
           </div>
@@ -45,12 +42,12 @@
       <div class="header row  ">
         <div class="col d-flex align-items-center justify-content-between">
         <h4 class="align-center">Our Service</h4>
-        <a href="#">see all</a>
+        <a href="<?=BASEURL?>/home/seedokter">see all</a>
       </div>
       </div>
       <div class="row d-flex justify-content-between">
         <?php foreach (array_slice($data['dokter'], 0, 3) as $dok) : ?>
-          <div class="doctor col-3">
+          <div class="doctor col-3" id="dokter">
             <a href="<?= BASEURL?>/home/detail/<?=$dok['id']?>" class="text-decoration-none">
               <h3 class="text-capitalize"><?= $dok['nama']; ?></h3>
               <p class="text-capitalize"><?= $dok['spesialis']; ?></p>

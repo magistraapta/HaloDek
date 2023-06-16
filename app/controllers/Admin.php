@@ -9,6 +9,7 @@ class Admin extends Controller{
 			exit;
 		}
 	} 
+    
     public function index(){
         $data['title'] = "halaman admin";
         // $data['nama'] = $this->model('User_model')->getNama();
@@ -23,9 +24,6 @@ class Admin extends Controller{
         $this->view('admin/createDokter', $data);
         $this->view('templates/adminFooter', );
     }
-
-    
-
 
     public function simpanDokter(){		
         // var_dump($_POST);

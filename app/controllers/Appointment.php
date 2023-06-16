@@ -34,15 +34,8 @@ class Appointment extends Controller{
         }
     }
 
-    public function edit($id)
-    {
-        $data['title'] = "edit appointment";
-        // $data['nama'] = $this->model('User_model')->getNama();
-        $data['dokter'] = $this->model('AppointmentModel')->getAppointmentId($id);
-        $this->view('templates/adminHeader', $data);
-        $this->view('admin/editAppointment', $data);
-        $this->view('templates/adminFooter', $data);
-    }
+   
+    
 
     public function hapus($id){
 		if( $this->model('AppointmentModel')->delete($id) > 0 ) {

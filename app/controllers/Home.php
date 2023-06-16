@@ -19,4 +19,26 @@ class Home extends Controller{
         $this->view('home/detail', $data);
         $this->view('templates/footer', $data); 
     }
+
+    public function seeDokter(){
+        $data['title'] = "halaman dokter";
+        $data['dokter'] =$this->model('DokterModel')->getAllDokter();
+        $this->view('templates/header', $data);
+        $this->view('home/seeAll', $data);
+        $this->view('templates/footer', $data);  
+    }
+
+    public function appointmentUser(){
+        $data['title'] = "halaman appointment user";
+        $this->view('templates/header', $data);
+        $this->view('home/appointmentUser', $data);
+        $this->view('templates/footer', $data);   
+    }
+
+    public function aboutUs(){
+        $data['title'] = "halaman about us";
+        $this->view('templates/header', $data);
+        $this->view('home/aboutUs', $data);
+        $this->view('templates/footer', $data);   
+    }
 }

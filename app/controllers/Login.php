@@ -26,7 +26,6 @@ class Login extends Controller{
 				// var_dump($_SESSION);
 				header('location: '. BASEURL . '/');
 		} else {
-			Flasher::setMessage('Username / Password','salah.','danger');
 			header('location: '. BASEURL . '/login');
 			exit;	
 		}
