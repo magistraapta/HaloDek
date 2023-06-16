@@ -9,7 +9,7 @@ class Admin extends Controller{
 			exit;
 		}
 	} 
-    
+
     public function index(){
         $data['title'] = "halaman admin";
         // $data['nama'] = $this->model('User_model')->getNama();
@@ -22,7 +22,6 @@ class Admin extends Controller{
         // $data['nama'] = $this->model('User_model')->getNama();
         $this->view('templates/adminHeader', $data);
         $this->view('admin/createDokter', $data);
-        $this->view('templates/adminFooter', );
     }
 
     public function simpanDokter(){		
@@ -39,7 +38,6 @@ class Admin extends Controller{
         $data['dokter'] = $this->model('DokterModel')->getAllDokter();
         $this->view('templates/adminHeader', $data);
         $this->view('admin/dokter', $data);
-        $this->view('templates/adminFooter', ); 
     }
 
     public function hapus($id){
@@ -61,7 +59,6 @@ class Admin extends Controller{
         $data['dokter'] = $this->model('DokterModel')->getDokterById($id);
         $this->view('templates/header', $data);
         $this->view('admin/editDokter', $data);
-        $this->view('templates/footer', $data);
     }
 
     public function updateDokter(){	

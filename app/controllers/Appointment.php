@@ -15,7 +15,6 @@ class Appointment extends Controller{
         $data['appointment'] =$this->model('AppointmentModel')->getAllAppointment();
         $this->view('templates/adminHeader', $data);
         $this->view('admin/appointmentPage', $data);
-        $this->view('templates/adminFooter', $data); 
     }
     
     public function processAppointment(){
